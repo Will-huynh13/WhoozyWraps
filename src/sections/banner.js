@@ -11,7 +11,7 @@ export default function Banner() {
       <container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as ="h1" variant ="heroPrimary">
-            Quality over Quanity.
+            Quality over Quantity.
           </Heading>
           <Text as ="p" variant="heroSecondary">
             At Whoozy's we can transform your car's apprerence with ease. Make your dreams come true.

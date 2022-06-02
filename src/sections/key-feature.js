@@ -23,7 +23,7 @@ const data = [
     altText: 'decal',
     title: 'Decals',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get yo decals here cuh.',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: 'tinting',
     title: 'Window Tinting',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'We tint so you can get head.',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     altText: 'detailing',
     title: 'Detailing',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Make your car shiny so they think its new',
   },
 ];
 

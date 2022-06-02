@@ -12,32 +12,32 @@ const data = [
   {
     id: 1,
     imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
+    altText: 'Car Vinyl',
+    title: 'Vinyl',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Give your car a new look!.',
   },
   {
     id: 2,
     imgSrc: Partnership,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
+    altText: 'decal',
+    title: 'Decals',
     text:
       'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
   {
     id: 3,
     imgSrc: Subscription,
-    altText: 'Pro Subscription',
-    title: 'Pro Subscription',
+    altText: 'tinting',
+    title: 'Window Tinting',
     text:
       'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
   {
     id: 4,
     imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
+    altText: 'detailing',
+    title: 'Detailing',
     text:
       'Get your blood tests delivered at home collect a sample from the your blood tests.',
   },
@@ -45,7 +45,25 @@ const data = [
 
 export default function KeyFeature() {
   return (
-   <h1>Key Feature</h1>
+    <section sx ={{variant: 'section.keyFeature'}}  id="feature">
+      <Container>
+        <SectionHeader
+          slogan = "Let your imagination come true"
+          title = "Meet our services"
+          />
+          <Grid sx = {styles.grid}>
+            {data.map((item) => (
+              <FeatureCardColumn
+                key={item.id}
+                src={item.imgSrc}
+                alt={item.altText}
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+          </Grid>
+      </Container>
+    </section>
   );
 }
 

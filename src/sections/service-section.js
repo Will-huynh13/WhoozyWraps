@@ -7,14 +7,13 @@ import ModalVideo from 'react-modal-video';
 import { IoIosPlay } from 'react-icons/io';
 
 import ServiceThumb from 'assets/service-thumb.png';
-import shapePattern from 'assets/shape-pattern1.png';
 
 import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
 
 const data = {
-  subTitle: 'our services',
-  title: 'Business Goals Achieved with Design',
+  subTitle: 'The process',
+  title: 'Your Imagination Achieved with Precision and Efficiency',
   features: [
     {
       id: 1,
@@ -36,6 +35,7 @@ const data = {
 };
 
 export default function ServiceSection() {
+  const [videoOpen, setVideoOpen] = useState(false)
   const handleClick =(e) => {
     e.preventDefault();
     setVideoOpen(true);
@@ -70,6 +70,16 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
+      <ModalVideo
+        channel='youtube'
+        youtube={{
+          autoplay: 1,
+          mute:1
+        }}
+        isOpen = {videoOpen}
+        videoId='dQw4w9WgXcQ'
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
 
   );

@@ -45,7 +45,17 @@ const data = [
 
 export default function Feature() {
   return (
-   <h1>Feature</h1>
+   <section sx={{variant: 'section.feature'}}>
+     <Container>
+       <SectionHeader
+         slogan="Recent works"
+         title="Here are some examples of our work!"
+        />
+        <Grid sx={styles.grid}>
+
+        </Grid>
+     </Container>
+   </section>
   );
 }
 

@@ -9,7 +9,11 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en-US">
-        <Head />
+        <Head>
+        <link href="http://fonts.cdnfonts.com/css/hemi-head-426" rel="stylesheet">
+          
+        </link>
+        </Head>
         <body>
           <Main />
           <NextScript />

@@ -4,39 +4,81 @@ import { Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 
 import PatternBG from 'assets/patternBG.png';
-import ArrowOdd from 'assets/arrowOdd.svg';
-import ArrowEven from 'assets/arrowEven.svg';
 
 const data = [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
+    title: 'Set up a consultation',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      "Get your ideas out and talk with one of the team members about your car's new look.",
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
+    title: 'Custom orders',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Depending on specialty wraps, we will order what is needed. Timeframe will depend on availablity and if item is on backorder.',
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
+    title: 'Car preparation',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Drop off the car and we will handle the rest!',
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
+    title: 'Careful disassembly',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Depending on how much custom work is being done. We will carefully disassemble your car to bring your ideas to life!',
+  },
+  {
+    id: 5,
+    title: 'Installation',
+    text:
+      'With precision and accuracy we will install your desired designs.',
+  },
+  {
+    id: 6,
+    title: 'Inspection',
+    text:
+      'We will throughly go over and inspect the car before it is handed back. ',
+  },
+  {
+    id: 7,
+    title: 'Final preparation',
+    text:
+      'Once our inspection is over, your car is carefully washed and detailed for you.',
+  },
+  {
+    id: 8,
+    title: 'Delivery',
+    text:
+      'The car is ready for pickup and we will inform you about further steps and care. ',
   },
 ];
 
 export default function WorkFlow() {
   return (
-    <h1>Workflow</h1>
+    <section sx={styles.workflow}>
+      <Container>
+        <SectionHeader
+          slogan="Our Workflow"
+          title="Commitment and Persistence"
+          isWhite={true}
+        />
+
+        <Grid sx={styles.grid}>
+          {data.map((item) => (
+            <Box sx={styles.card} key={item.id}>
+              <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
+              <Box sx={styles.wrapper}>
+                <Heading sx ={styles.wrapper.title}>{item.title}</Heading>
+                <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
+      </Container>
+    </section>
   );
 }
 
@@ -91,13 +133,6 @@ const styles = {
       '@media screen and (max-width:1220px)': {
         display: 'none',
       },
-    },
-    '&:nth-of-type(2n-1)::before': {
-      backgroundImage: `url(${ArrowOdd})`,
-    },
-    '&:nth-of-type(2n)::before': {
-      backgroundImage: `url(${ArrowEven})`,
-      top: 17,
     },
     '&:last-child::before': {
       display: 'none',

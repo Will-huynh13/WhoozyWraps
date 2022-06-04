@@ -35,8 +35,9 @@ export default {
     '1620px',
   ],
   fonts: {
-    body: "'DM Sans', sans-serif",
-    heading: "'DM Sans', sans-serif",
+    body: "'Hemi Head FourTwentySix', sans-serif",
+    heading: "'Hemi Head FourTwentySix', sans-serif",
+    text: "'DM Sans', sans-serif"
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
   fontWeights: {
@@ -145,7 +146,7 @@ export default {
       lineHeight: 'heading',
       fontWeight: 'heading',
       fontSize: [4],
-      letterSpacing: '-.55px',
+      letterSpacing: '.50px',
       color: 'heading',
     },
     heroPrimary: {
@@ -165,9 +166,9 @@ export default {
       mb: [4, null, null, null, null, 5],
     },
     heroSecondary: {
-      fontSize: [2, null, '17px', null, null, '19px', 4],
+      fontSize: ["17px", "17px", '17px', null, null, '17px', 4],
       lineHeight: [1.9, null, null, 2],
-      fontWeight: 'body',
+      fontWeight: 'text',
       mb: 5,
       px: [0, null, 5, 6, null, 8, 9],
       color: 'heading',
@@ -357,7 +358,7 @@ export default {
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
-      fontFamily: 'body',
+      fontFamily: 'text',
       lineHeight: 'body',
       fontWeight: 'body',
       fontSmoothing: 'antialiased',

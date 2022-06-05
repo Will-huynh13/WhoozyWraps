@@ -43,6 +43,7 @@ const styles = {
     justifyContent: 'space-between',
     flexWrap: ['wrap', null, null, 'nowrap'],
     pb: [0, 7, 0, null, 7],
+    //fontFamily: 'text',
   },
   contentBox: {
     flexShrink: 0,
@@ -53,6 +54,7 @@ const styles = {
     mx: ['auto', null, null, 0],
     '.description': {
       pr: [0, null, 6, 7, 6],
+      fontFamily: 'text',
     },
   },
   thumbnail: {

@@ -168,8 +168,9 @@ const styles = {
     },
 
     subTitle: {
+      fontFamily: 'text',
       fontSize: 1,
-      fontWeight: 400,
+      fontWeight: 500,
       lineHeight: [1.85, null, null, 1.9, 2],
       color: 'white',
       opacity: 0.75,

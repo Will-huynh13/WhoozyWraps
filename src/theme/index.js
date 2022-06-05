@@ -126,7 +126,7 @@ export default {
       lineHeight: [1.3, null, null, 1.25],
       textAlign: 'center',
       fontWeight: '700',
-      letterSpacing: '-.5px',
+      letterSpacing: '1px',
     },
 
     subTitle: {
@@ -166,9 +166,10 @@ export default {
       mb: [4, null, null, null, null, 5],
     },
     heroSecondary: {
+      fontFamily: 'text',
       fontSize: ["17px", "17px", '17px', null, null, '17px', 4],
       lineHeight: [1.9, null, null, 2],
-      fontWeight: 'text',
+      fontWeight: 'body',
       mb: 5,
       px: [0, null, 5, 6, null, 8, 9],
       color: 'heading',
@@ -358,7 +359,7 @@ export default {
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
-      fontFamily: 'text',
+      fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
       fontSmoothing: 'antialiased',

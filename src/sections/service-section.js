@@ -41,7 +41,7 @@ export default function ServiceSection() {
     setVideoOpen(true);
   }
   return (
-    <section sx={{variant: 'section.services'}}>
+    <section sx={{variant: 'section.services'}} id="feature">
       <Container sx ={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src ={ServiceThumb} alt ="Thumbnail"/>
@@ -51,7 +51,7 @@ export default function ServiceSection() {
           aria-label="Play Button"
           >
             <span>
-              <IoIosPlay  />
+              <IoIosPlay/>
             </span>
           </Button>
         </Box>
@@ -213,8 +213,9 @@ const styles = {
 
     subTitle: {
       fontSize: [1, null, null, '14px', 1],
-      fontWeight: 400,
+      fontWeight: 600,
       lineHeight: 1.9,
+      fontFamily: 'text',
     },
   },
   videoWrapper: {

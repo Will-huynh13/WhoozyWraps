@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/banner-thumb.png';
+import { Link } from 'components/link';
 
 export default function Banner() {
   return (
@@ -14,9 +15,9 @@ export default function Banner() {
           <Text as ="p" variant="heroSecondary">
             At Whoozy's we can transform your car's apprerence with ease. Make your dreams come true.
           </Text>
-          <Button variant="primary">
-            Explore
-          </Button>
+            <Button variant="primary">
+              Explore
+            </Button>
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

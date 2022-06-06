@@ -2,14 +2,12 @@
 import { jsx, Container, Box, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 
-import FeatureThumb from 'assets/core-feature.png';
-
 const data = {
-  subTitle: 'Core features',
-  title: 'Smart Jackpots that you may love this anytime & anywhere',
+  subTitle: 'Why wrap a car?',
+  title: 'Versatility and Economical ',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
-  btnName: 'Get Started',
+    'Explore our brands and the benefits of wrapping your car.',
+  btnName: 'Learn more',
   btnURL: '#',
 };
 
@@ -26,10 +24,20 @@ export default function CoreFeature() {
           btnURL={data.btnURL}
         />
       </Box>
-      <Box sx={styles.thumbnail}>
-        <Image src={FeatureThumb} alt="Thumbnail" />
+      <section sx={styles.containerBox}>
+      <video 
+      autoPlay 
+      loop 
+      muted
+      height={400}
+      width={600}
+      >
+          <source src='/SPTruck.mp4' type='video/mp4'/>
+      </video>
         <Box sx={styles.shapeBox}>
         </Box>
+      </section>
+      <Box sx={styles.thumbnail}>
       </Box>
     </Container>
    </section>

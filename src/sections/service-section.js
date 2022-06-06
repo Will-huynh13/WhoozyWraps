@@ -18,18 +18,18 @@ const data = {
     {
       id: 1,
       imgSrc: Smart,
-      altText: 'Smart Features',
-      title: 'Smart Features',
+      altText: 'Guaranteed Satisfaction',
+      title: 'Guaranteed Satisfaction',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        "We guarantee that you'll love your new wrap no matter what. ",
     },
     {
       id: 2,
       imgSrc: Secure,
-      altText: 'Secure Contents',
-      title: 'Secure Contents',
+      altText: 'Peace of mind',
+      title: 'Peace of mind',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        "At Whoozy's wraps, we make sure all installations are done right.",
     },
   ],
 };

@@ -13,11 +13,16 @@ export default function Banner() {
             Quality over Quantity.
           </Heading>
           <Text as ="p" variant="heroSecondary">
-            At Whoozy's we can transform your car's apprerence with ease. Make your dreams come true.
+            At Whoozy's we can transform your car's apprerence with ease.
+            <p>
+              Book today and make your dreams come true!
+            </p>
           </Text>
+          <Link href="/">
             <Button variant="primary">
-              Explore
+              <a>Gallery</a>
             </Button>
+          </Link>
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

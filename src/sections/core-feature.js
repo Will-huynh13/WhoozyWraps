@@ -24,21 +24,13 @@ export default function CoreFeature() {
           btnURL={data.btnURL}
         />
       </Box>
-      <section sx={styles.containerBox}>
-      <video 
+      <video sx={{variant: 'section.coreFeature'}} 
       autoPlay 
       loop 
       muted
-      height={400}
-      width={600}
       >
           <source src='/SPTruck.mp4' type='video/mp4'/>
       </video>
-        <Box sx={styles.shapeBox}>
-        </Box>
-      </section>
-      <Box sx={styles.thumbnail}>
-      </Box>
     </Container>
    </section>
   );

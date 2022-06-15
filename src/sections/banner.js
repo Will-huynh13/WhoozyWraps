@@ -18,11 +18,11 @@ export default function Banner() {
               Book today and make your dreams come true!
             </p>
           </Text>
-          <Link href="/">
+          <a href='#gallery'>
             <Button variant="primary">
-              <a>Gallery</a>
+              Gallery
             </Button>
-          </Link>
+          </a>
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

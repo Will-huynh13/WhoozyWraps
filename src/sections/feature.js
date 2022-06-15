@@ -2,73 +2,37 @@
 import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
-import FeatureCard from 'components/feature-card.js';
-import Performance from 'assets/feature/performance.svg';
-import Partnership from 'assets/feature/partnership.svg';
-import Subscription from 'assets/feature/subscription.svg';
-import Support from 'assets/feature/support.svg';
 
-const data = [
-  {
-    id: 1,
-    imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
-    text:
-      'Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.',
-  },
-  {
-    id: 2,
-    imgSrc: Partnership,
-    altText: 'Pro Subscription',
-    title: 'Pro Subscription',
-    text:
-      'We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.',
-  },
-  {
-    id: 3,
-    imgSrc: Subscription,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
-    text:
-      'Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.',
-  },
-  {
-    id: 4,
-    imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
-    text:
-      'We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.',
-  },
-];
-
-export default function Feature() {
+export default function Feature(feed) {
+  console.log(feed)
+  const images = feed.data;
   return (
-   <section sx={{variant: 'section.feature'}} id ="gallery">
+    <section sx={{variant: 'section.feature'}} id ="gallery">
      <Container>
        <SectionHeader
          slogan="Recent works"
          title="Here are some examples of our work!"
-        />
-        <Grid sx={styles.grid}>
-          {data.map((item) => (
-            <FeatureCard
-            key={item.id}
-            src={item.imgSrc}
-            alt={item.altText}
-            title={item.title}
-            text={item.text}
-
-            />
-          ))}
-
-        </Grid>
+         />
+        {/* <Grid sx={styles.grid}> */}
+        {/* </Grid> */}
      </Container>
+     {images && images.map(image => (
+            <div key={images.id}>
+              <img src ={image.media_url} alt={image.caption}/>
+            </div>
+          ))}
    </section>
   );
 }
 
+export const  getInsta = async () => {
+  const url = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=IGQVJVLWptdEpqRWlxOGNhOGd3bHIxQmZA2MUxDOU1EbVVoMHlWaGRIdklObl81dDMxRmdIeUsxdU11eFRyNXgtUE5WbDZAoMDJGc2ZAXQmw0Qmp0cnl6REg2LXRwb3NqRl9NUU5Iam9nQjdGZAzFXVkpvYgZDZD'
+  const data = await fetch(url);
+  const feed = await data.json();
+  return(
+     feed
+  )
+};
 const styles = {
   grid: {
     pt: [0, null, null, null, null, null, 2],

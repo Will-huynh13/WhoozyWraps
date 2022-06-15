@@ -38,7 +38,7 @@ const data = [
     id: 2,
     imgSrc: Member2,
     altText: 'Andrew Chum',
-    title: 'Adrew Chum',
+    title: 'Andrew Chum',
     designation: 'Installer',
     socialProfile: [
       {
@@ -55,6 +55,7 @@ const data = [
       },
     ],
   },
+  //for the third person
   // {
   //   id: 3,
   //   imgSrc: Member2,
@@ -113,7 +114,7 @@ const styles = {
       null,
       'repeat(2,1fr)',
       null,
-      // 'repeat(3,1fr)',
+      // 'repeat(3,1fr)', this is needed for 3 people
     ],
   },
 };

@@ -12,24 +12,24 @@ import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
 
 const data = {
-  subTitle: 'The process',
+  subTitle: 'Our promise',
   title: 'Your Imagination Achieved with Precision and Efficiency',
   features: [
     {
       id: 1,
       imgSrc: Smart,
-      altText: 'Smart Features',
-      title: 'Smart Features',
+      altText: 'Guaranteed Satisfaction',
+      title: 'Guaranteed Satisfaction',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        "We guarantee that you'll love your new wrap no matter what. ",
     },
     {
       id: 2,
       imgSrc: Secure,
-      altText: 'Secure Contents',
-      title: 'Secure Contents',
+      altText: 'Peace of mind',
+      title: 'Peace of mind',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        "At Whoozy's wraps, we make sure all installations are done right.",
     },
   ],
 };
@@ -41,7 +41,7 @@ export default function ServiceSection() {
     setVideoOpen(true);
   }
   return (
-    <section sx={{variant: 'section.services'}}>
+    <section sx={{variant: 'section.services'}} id="feature">
       <Container sx ={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src ={ServiceThumb} alt ="Thumbnail"/>
@@ -51,7 +51,7 @@ export default function ServiceSection() {
           aria-label="Play Button"
           >
             <span>
-              <IoIosPlay  />
+              <IoIosPlay/>
             </span>
           </Button>
         </Box>
@@ -213,8 +213,9 @@ const styles = {
 
     subTitle: {
       fontSize: [1, null, null, '14px', 1],
-      fontWeight: 400,
+      fontWeight: 600,
       lineHeight: 1.9,
+      fontFamily: 'text',
     },
   },
   videoWrapper: {

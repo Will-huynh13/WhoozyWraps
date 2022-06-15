@@ -4,7 +4,24 @@ import { Text, Heading, Image, Box, Link } from 'theme-ui';
 
 export default function TeamCard({ src, altText, title, designation, social }) {
   return (
-    <h1>TeamCard</h1>
+    <Box sx={styles.card}>
+      <Image src={src} alt={altText} sx={styles.memberThumb}/>
+        <Box sx={styles.infoWrapper}>
+          <Heading className="info__name" sx={styles.infoWrapper.name}>
+            {title}
+          </Heading>
+          <Text className="info__designation" sx={styles.infoWrapper.designation}>
+            {designation}
+          </Text>
+        </Box>
+        <Box sx={styles.socialShare} className="social__share">
+          {social.map((item) => (
+            <Link target ="_blank"key ={item.id} href={item.path} className={item.name}>
+              {item.icon}
+            </Link>
+          ))}
+        </Box>
+    </Box>
   );
 }
 
@@ -37,12 +54,12 @@ const styles = {
   },
 
   memberThumb: {
-    width: ['70px', '80px', '100px', null, null, '130px'],
-    height: ['70px', '80px', '100px', null, null, '130px'],
+   // width: ['100px', '100px', '100px', null, null, '130px'],
+   // height: ['100px', '1000px', '100px', null, null, '130px'],
     flexShrink: 0,
     border: '2px solid',
     borderColor: 'primary',
-    borderRadius: '50%',
+    //borderRadius: '50%',
   },
   infoWrapper: {
     width: '100%',
@@ -57,10 +74,11 @@ const styles = {
     },
     designation: {
       fontSize: ['14px', null, null, 2],
-      fontWeight: 'body',
+      fontWeight: 'heading',
       lineHeight: 'heading',
       color: 'text',
       transition: 'color 0.25s',
+      fontFamily: 'text'
     },
   },
   socialShare: {

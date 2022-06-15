@@ -46,8 +46,9 @@ const styles = {
     },
     subTitle: {
       fontSize: 1,
-      fontWeight: 400,
+      fontWeight: 500,
       lineHeight: '1.9',
+      fontFamily: 'text',
     },
   },
 };

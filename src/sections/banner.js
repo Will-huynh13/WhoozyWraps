@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/banner-thumb.png';
+import { Link } from 'components/link';
 
 export default function Banner() {
   return (
@@ -12,11 +13,16 @@ export default function Banner() {
             Quality over Quantity.
           </Heading>
           <Text as ="p" variant="heroSecondary">
-            At Whoozy's we can transform your car's apprerence with ease. Make your dreams come true.
+            At Whoozy's we can transform your car's apprerence with ease.
+            <p>
+              Book today and make your dreams come true!
+            </p>
           </Text>
-          <Button variant="primary">
-            Explore
-          </Button>
+          <Link href="/">
+            <Button variant="primary">
+              <a>Gallery</a>
+            </Button>
+          </Link>
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

@@ -35,8 +35,9 @@ export default {
     '1620px',
   ],
   fonts: {
-    body: "'DM Sans', sans-serif",
-    heading: "'DM Sans', sans-serif",
+    body: "'Hemi Head FourTwentySix', sans-serif",
+    heading: "'Hemi Head FourTwentySix', sans-serif",
+    text: "'DM Sans', sans-serif"
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
   fontWeights: {
@@ -125,7 +126,7 @@ export default {
       lineHeight: [1.3, null, null, 1.25],
       textAlign: 'center',
       fontWeight: '700',
-      letterSpacing: '-.5px',
+      letterSpacing: '1px',
     },
 
     subTitle: {
@@ -145,7 +146,7 @@ export default {
       lineHeight: 'heading',
       fontWeight: 'heading',
       fontSize: [4],
-      letterSpacing: '-.55px',
+      letterSpacing: '.50px',
       color: 'heading',
     },
     heroPrimary: {
@@ -165,7 +166,8 @@ export default {
       mb: [4, null, null, null, null, 5],
     },
     heroSecondary: {
-      fontSize: [2, null, '17px', null, null, '19px', 4],
+      fontFamily: 'text',
+      fontSize: ["17px", "17px", '17px', null, null, '17px', 4],
       lineHeight: [1.9, null, null, 2],
       fontWeight: 'body',
       mb: 5,

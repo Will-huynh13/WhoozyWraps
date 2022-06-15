@@ -15,7 +15,7 @@ const data = [
     altText: 'Car Vinyl',
     title: 'Vinyl',
     text:
-      'Give your car a new look!.',
+      'Give your car a new look!',
   },
   {
     id: 2,
@@ -48,14 +48,14 @@ export default function KeyFeature() {
     <section sx ={{variant: 'section.keyFeature'}}  id="feature">
       <Container>
         <SectionHeader
-          slogan = "Let your imagination come true"
+          slogan = "Reimagine your car"
           title = "Meet our services"
           />
           <Grid sx = {styles.grid}>
             {data.map((item) => (
               <FeatureCardColumn
                 key={item.id}
-                src={item.imgSrc}
+                //src={item.imgSrc}
                 alt={item.altText}
                 title={item.title}
                 text={item.text}

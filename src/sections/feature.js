@@ -3,9 +3,22 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 
-export default function Feature(feed) {
-  console.log(feed)
-  const images = feed.data;
+export const getStaticProps = async () => {
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=
+  ${process.env.INSTAGRAM_KEY}`;
+  const data = await fetch(url)
+  const feed = await data.json()
+  return {
+    props: {
+      insta: feed,
+    }
+  }
+}
+
+
+export function Feature(insta) {
+  const images = insta.data;
+  console.log(insta)
   return (
     <section sx={{variant: 'section.feature'}} id ="gallery">
      <Container>
@@ -13,26 +26,19 @@ export default function Feature(feed) {
          slogan="Recent works"
          title="Here are some examples of our work!"
          />
-        {/* <Grid sx={styles.grid}> */}
-        {/* </Grid> */}
+        <Grid sx={styles.grid}>
+               {images && images.map(image => (
+               <div key={images.id}>
+                    <img src ={image.media_url} alt={image.caption}/>
+                </div>
+                ))}
+         </Grid>
      </Container>
-     {images && images.map(image => (
-            <div key={images.id}>
-              <img src ={image.media_url} alt={image.caption}/>
-            </div>
-          ))}
    </section>
   );
 }
 
-export const  getInsta = async () => {
-  const url = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=IGQVJVLWptdEpqRWlxOGNhOGd3bHIxQmZA2MUxDOU1EbVVoMHlWaGRIdklObl81dDMxRmdIeUsxdU11eFRyNXgtUE5WbDZAoMDJGc2ZAXQmw0Qmp0cnl6REg2LXRwb3NqRl9NUU5Iam9nQjdGZAzFXVkpvYgZDZD'
-  const data = await fetch(url);
-  const feed = await data.json();
-  return(
-     feed
-  )
-};
+
 const styles = {
   grid: {
     pt: [0, null, null, null, null, null, 2],
@@ -50,3 +56,5 @@ const styles = {
     gridTemplateColumns: ['repeat(1,1fr)', null, 'repeat(2,1fr)'],
   },
 };
+
+export default Feature

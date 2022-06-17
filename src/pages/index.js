@@ -34,8 +34,7 @@ export default function IndexPage({data}) {
 }
 
 export async function getServerSideProps () {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=
-  ${process.env.INSTAGRAM_KEY}`;
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   const res = await fetch(url);
   const data = await res.json();
 

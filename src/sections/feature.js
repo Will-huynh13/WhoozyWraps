@@ -6,7 +6,7 @@ import SectionHeader from "components/section-header";
 
 function Feature({data}) {
   const images = data.data;
-  console.log("props:\n", data);
+  // console.log("props:\n", data);
   return (
     <section sx={{ variant: "section.feature" }} id="gallery">
       <Container>
@@ -15,14 +15,14 @@ function Feature({data}) {
           title="Here are some examples of our work!"
         />
         <Grid sx={styles.grid}>
-          {images &&
-            images.map((image) => (
-              <div key={images.id}>
-                <img src={image.media_url} alt={image.caption} />
-              </div>
-            ))}
+          {images && images.map((image) => (
+            <div key={images.id}>
+                  <img width={300} height={300} className="object-cover aspect-square" src={image.media_url} />
+                </div>
+              ))}
         </Grid>
-      </Container>
+        </Container>
+
     </section>
   );
 }
@@ -42,7 +42,7 @@ const styles = {
       null,
       "80px 90px",
     ],
-    gridTemplateColumns: ["repeat(1,1fr)", null, "repeat(2,1fr)"],
+    gridTemplateColumns: ["repeat(1,1fr)", "repeat(2,1fr)", "repeat(3,1fr)"],
   },
 };
 

@@ -27,6 +27,11 @@ export default function Footer() {
           <Text sx={styles.footer.copyright}>
                 Copyright {new Date().getFullYear()} Whoozy's Wraps
           </Text>
+          <a target="_blank" href='https://www.instagram.com/nbhd_media/?hl=en'>
+          <Text sx={styles.footer.copyright}>
+                Banner image provided by @nbhd_media
+          </Text>
+          </a>
           <Box sx={styles.footer.info}>
           <Text>
             whoozyswraps@hotmail.com
@@ -82,7 +87,7 @@ const styles = {
       },
     },
     copyright: {
-      fontSize: [1, '13px'],
+      fontSize: [1, '15px'],
       width: '100%',
       
     },

@@ -45,7 +45,7 @@ const data = [
 
 export default function KeyFeature() {
   return (
-    <section sx ={{variant: 'section.keyFeature'}}  id="feature">
+    <section sx ={{variant: 'section.keyFeature'}}  id="products">
       <Container>
         <SectionHeader
           slogan = "Reimagine your car"

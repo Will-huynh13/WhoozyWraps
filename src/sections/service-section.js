@@ -55,6 +55,13 @@ export default function ServiceSection() {
             </span>
           </Button>
         </Box>
+      {/* <video sx={styles.contentBox}
+      autoPlay 
+      loop 
+      muted
+      >
+          <source src='/wrapping.mp4' type='video/mp4'/>
+      </video> */}
         <Box sx ={styles.contentBox}>
           <TextFeature subTitle ={data.subTitle} title ={data.title}/>
           <Grid sx ={styles.grid}>

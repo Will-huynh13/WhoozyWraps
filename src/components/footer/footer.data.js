@@ -6,15 +6,7 @@ export default {
     },
     {
       path: '/',
-      label: 'Adversite',
-    },
-    {
-      path: '/',
-      label: 'Supports',
-    },
-    {
-      path: '/',
-      label: 'Marketing',
+      label: 'Customer Support',
     },
     {
       path: '/',

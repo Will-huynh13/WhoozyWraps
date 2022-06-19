@@ -6,7 +6,41 @@ import FooterLogo from 'assets/logo.svg';
 
 export default function Footer() {
   return (
-    <h1>Footer</h1>
+    <footer sx={styles.footer}>
+      <Container>
+        <Box sx ={styles.footerBottomArea}>
+          {/* <Link path ="/">
+            <Image src ={FooterLogo} alt="Whoozy Logo"/>
+          </Link> */}
+          <Box sx={styles.footer.menus}>
+            <nav>
+              {data.menuItem.map((item,i) => (
+                <Link
+                  path={item.path}
+                  key={i}
+                  label={item.label}
+                  sx={styles.footer.link}
+                />
+              ))}
+            </nav>
+          </Box>
+          <Text sx={styles.footer.copyright}>
+                Copyright {new Date().getFullYear()} Whoozy's Wraps
+          </Text>
+          <Box sx={styles.footer.info}>
+          <Text>
+            whoozyswraps@hotmail.com
+          </Text>
+          <Text>
+          4845 Pontiac Street, Commerce City CO, 80022
+          </Text>
+          <Text>
+          (720)-441-4506
+          </Text>
+          </Box>
+        </Box>
+      </Container>
+    </footer>
   );
 }
 
@@ -48,8 +82,14 @@ const styles = {
       },
     },
     copyright: {
-      fontSize: [1, '15px'],
+      fontSize: [1, '13px'],
       width: '100%',
+      
+    },
+    info: {
+      fontFamily: "text",
+      textAlign: "right",
+      borderTop: '1px solid',
     },
   },
 };

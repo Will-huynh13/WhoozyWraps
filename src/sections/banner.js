@@ -18,11 +18,11 @@ export default function Banner() {
               Book today and make your dreams come true!
             </p>
           </Text>
-          <Link href="/">
+          <a sx={{variant: 'section.feature'}}href='#explore'>
             <Button variant="primary">
-              <a>Gallery</a>
+              Explore
             </Button>
-          </Link>
+          </a>
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

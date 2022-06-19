@@ -266,7 +266,19 @@ export default function Package() {
   };
 
   return (
-    <h1>Package</h1>
+    <section id="pricing" sx={{variant: 'section.pricing'}}>
+      <Container>
+        <SectionHeader
+          slogan="Pricing"
+          title="Our Rates"
+        />
+        <Flex sx={styles.buttonGroup}>
+          <Box sx={styles.buttonGroupInner}>
+          </Box>
+
+        </Flex>
+      </Container>
+    </section>
   );
 }
 

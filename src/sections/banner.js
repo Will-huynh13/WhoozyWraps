@@ -18,9 +18,9 @@ export default function Banner() {
               Book today and make your dreams come true!
             </p>
           </Text>
-          <a href='#gallery'>
+          <a sx={{variant: 'section.feature'}}href='#explore'>
             <Button variant="primary">
-              Gallery
+              Explore
             </Button>
           </a>
         </Box>

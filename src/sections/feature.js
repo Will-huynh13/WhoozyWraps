@@ -15,8 +15,7 @@ function Feature({data}) {
           slogan="Recent works"
           title="Here are some examples of our work!"
         />
-        <Container>
-        <div>
+        <Grid sx={styles.grid}>
           {images && images.map((image) => (
             <div key={images.id}>
               <a target ="_blank" href={image.permalink}>
@@ -29,10 +28,8 @@ function Feature({data}) {
               </a>
                 </div>
               ))}
-        </div>
+              </Grid>
         </Container>
-        </Container>
-
     </section>
   );
 }
@@ -46,7 +43,7 @@ const styles = {
     rowGap:[
       "0px"
     ],
-    gridTemplateColumns: ["repeat(4, [col-start] min-content [col-end])"],
+    gridTemplateColumns: ["repeat(4, [col-start] fit-content(200px) [col-end])"],
   },
 };
 

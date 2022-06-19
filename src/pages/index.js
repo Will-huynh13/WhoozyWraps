@@ -21,8 +21,8 @@ export default function IndexPage({data}) {
           <SEO title="Whoozy's Wraps" />
           <Banner />
           <KeyFeature />
-          <ServiceSection />
           <Feature data={data} />
+          <ServiceSection />
           <CoreFeature />
           <WorkFlow />
           <Package />

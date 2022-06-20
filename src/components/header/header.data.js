@@ -15,4 +15,7 @@ export default [
     path: 'gallery',
     label: 'Gallery',
   },
+  {
+    path: 'explore',
+  },
 ];

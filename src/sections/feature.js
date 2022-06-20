@@ -34,6 +34,9 @@ function Feature({data}) {
         />
         <Carousel 
         responsive={responsive}
+        autoPlaySpeed={3000}
+        autoPlay={true}
+        infinite={true}
         >
             {images && images.map((image) => (
                   <a target ="_blank" href={image.permalink}>
@@ -51,5 +54,4 @@ function Feature({data}) {
     </section>
   );
 }
-
 export default Feature;

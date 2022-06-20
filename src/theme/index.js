@@ -9,7 +9,7 @@ export default {
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
     yellow: '#FFA740', // border color
-    primary: '#EA3A60', // primary button and link color
+    primary: '#2563FF', // primary button and link color
     secondary: '#2563FF', // secondary color - can be used for hover states
     muted: '#E4E4E4', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -85,17 +85,17 @@ export default {
     main: {},
   },
   section: {
-    keyFeature: {
+    keyFeature: { //products
       pt: [8, null, 9, null, null, 10],
       pb: ['90px', null, 9, null, null, 10, null, '165px'],
     },
-    feature: {
+    feature: { //gallery
       pb: [8, null, 9, null, null, 10, null, '170px'],
     },
     news: {
       pb: [8, null, 9, null, null, 10, null, '170px'],
     },
-    coreFeature: {
+    coreFeature: { //explore
       pb: [8, null, 9, null, null, 10, null, '170px'],
       overflow: 'hidden',
     },

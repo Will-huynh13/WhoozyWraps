@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/banner-thumb.png';
-import { Link } from 'components/link';
+import { Link } from 'react-scroll';
 
 export default function Banner() {
   return (
@@ -13,16 +13,24 @@ export default function Banner() {
             Quality over Quantity.
           </Heading>
           <Text as ="p" variant="heroSecondary">
-            At Whoozy's we can transform your car's apprerence with ease.
+            At Whoozy's we can transform your car's appearance with ease.
             <p>
               Book today and make your dreams come true!
             </p>
           </Text>
-          <a sx={{variant: 'section.feature'}}href='#explore'>
+          <Link
+                activeClass="active"
+                to="explore"
+                spy= {true}
+                smooth = {true}
+                offset= {-200}
+                duration ={500}
+              >
             <Button variant="primary">
               Explore
             </Button>
-          </a>
+              </Link>
+
         </Box>
 
         <Box sx ={styles.banner.imageBox}>

@@ -13,19 +13,46 @@ export default function Header({ className }) {
         <Container sx = {styles.container}>
           <Logo src = {LogoDark} />
           <Flex as = "nav" sx = {styles.nav}>
-            {menuItems.map((menuItems, i) => (
               <Link
                 activeClass="active"
-                to={menuItems.path}
+                to="home"
                 spy= {true}
                 smooth = {true}
-                offset= {-70}
+                offset= {-180}
                 duration ={500}
-                key = {i}
               >
-                {menuItems.label}
+                Home
               </Link>
-            ))}
+              <Link
+                activeClass="active"
+                to="products"
+                spy= {true}
+                smooth = {true}
+                offset= {-80}
+                duration ={500}
+              >
+                Products
+              </Link>
+              <Link
+                activeClass="active"
+                to="pricing"
+                spy= {true}
+                smooth = {true}
+                offset= {-50}
+                duration ={500}
+              >
+                Pricing
+              </Link>
+              <Link
+                activeClass="active"
+                to="gallery"
+                spy= {true}
+                smooth = {true}
+                offset= {-180}
+                duration ={500}
+              >
+                Gallery
+              </Link>
           </Flex>
           <Button className= "donate__btn" variant ="secondary" aria-label ="Contact">
             Contact

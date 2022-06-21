@@ -8,7 +8,7 @@ const data = {
   description:
     'Explore our brands and the benefits of wrapping your car.',
   btnName: 'Learn more',
-  btnURL: '#',
+  btnURL: '/explore',
 };
 
 export default function CoreFeature() {
@@ -43,7 +43,6 @@ const styles = {
     justifyContent: 'space-between',
     flexWrap: ['wrap', null, null, 'nowrap'],
     pb: [0, 7, 0, null, 7],
-    //fontFamily: 'text',
   },
   contentBox: {
     flexShrink: 0,

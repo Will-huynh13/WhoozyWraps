@@ -5,11 +5,10 @@ import { Link } from 'react-scroll';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.svg';
 import MobileDrawer from './mobile-drawer';
-import menuItems from './header.data';
 
 export default function Header({ className }) {
   return (
-      <header sx = {styles.header} className= {className} >
+      <header sx = {styles.header} className= {className} id="Header" >
         <Container sx = {styles.container}>
           <Logo src = {LogoDark} />
           <Flex as = "nav" sx = {styles.nav}>

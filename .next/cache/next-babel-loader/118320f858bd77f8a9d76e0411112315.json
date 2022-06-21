@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function explore() {}","map":{"version":3,"sources":["C:/Users/Will's Gaming PC/Documents/Development/WhoozyWraps/src/pages/explore.js"],"names":["explore"],"mappings":"AAAA,eAAe,SAASA,OAAT,GAAkB,CAEhC","sourcesContent":["export default function explore(){\r\n    \r\n}"]},"metadata":{},"sourceType":"module"}

@@ -20,7 +20,7 @@ export default function Banner() {
           </Text>
           <Link
                 activeClass="active"
-                to="explore"
+                to="/explore"
                 spy= {true}
                 smooth = {true}
                 offset= {-200}

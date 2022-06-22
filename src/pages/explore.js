@@ -8,7 +8,7 @@ import MobileDrawer from '../components/header/mobile-drawer';
 
 export default function Header() {
   return (
-      <header sx = {styles.header} id="explore">
+      <header sx = {styles.header}>
         <Container sx = {styles.container}>
           <Logo src = {LogoDark} />
           <Flex as = "nav" sx = {styles.nav}>
